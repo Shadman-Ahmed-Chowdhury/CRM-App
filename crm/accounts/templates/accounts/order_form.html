@@ -1,0 +1,25 @@
+{% extends "accounts/main.html" %}
+
+{% load static %}
+
+{% block content %}
+  <style media="screen">
+    .row {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  </style>
+  <br>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card card-body">
+        <form class="" action="" method="POST">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <input type="submit" name="Submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
